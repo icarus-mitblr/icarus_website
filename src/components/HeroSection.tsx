@@ -170,7 +170,15 @@ const SolarSystemBg = () => {
       const minDim = Math.min(w, h);
       const sunX = w / 2, sunY = h / 2;
 
-      ctx.clearRect(0, 0, w, h);
+     ctx.fillStyle = "#00000f";
+ctx.fillRect(0, 0, w, h);
+
+const nebula = ctx.createRadialGradient(w * 0.5, h * 0.4, 0, w * 0.5, h * 0.4, w * 0.55);
+nebula.addColorStop(0,   "rgba(30, 60, 120, 0.18)");
+nebula.addColorStop(0.5, "rgba(10, 25,  70, 0.10)");
+nebula.addColorStop(1,   "rgba(0,   0,   0, 0)");
+ctx.fillStyle = nebula;
+ctx.fillRect(0, 0, w, h);
 
       for (const s of stars) {
         s.twinkle += s.twinkleSpeed;
@@ -516,17 +524,17 @@ const HeroSection = () => {
 
       {/* ── Subtitle: crossfades between Latin and Greek ── */}
       <div
-        style={{
-          position: "relative",
-          zIndex: 10,
-          height: "1.5em",
-          marginTop: "0.75rem",
-          width: "100%",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
+  style={{
+    position: "relative",
+    zIndex: 10,
+    height: "2em", // FIXED
+    marginTop: "clamp(1.5rem, 3vw, 2.5rem)", // FIXED
+    width: "100%",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  }}
+>
         {/* English subtitle */}
         <motion.p
           className="font-mono text-xs md:text-sm tracking-[0.28em] uppercase text-center"

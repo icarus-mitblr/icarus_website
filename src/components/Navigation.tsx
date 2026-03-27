@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import manipalLogo from "@/assets/manipal_logo.png";
 import icarusLogo from "@/assets/icarus-logo.jpg";
 
 const navItems = [
@@ -31,7 +30,7 @@ const Navigation = () => {
     >
       <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
 
-        {/* Left — both logos side by side */}
+        {/* Left — ICARUS logo + wordmark */}
         <a href="#home" className="flex items-center gap-3">
 
           {/* ICARUS logo */}
@@ -53,38 +52,6 @@ const Navigation = () => {
                 width: "100%",
                 height: "100%",
                 objectFit: "cover",
-                display: "block",
-              }}
-            />
-          </div>
-
-          {/* Divider */}
-          <div
-            style={{
-              width: "1px",
-              height: "28px",
-              background: "rgba(200,165,55,0.25)",
-              flexShrink: 0,
-            }}
-          />
-
-          {/* Manipal logo */}
-          <div
-            style={{
-              background: "rgba(255,255,255,0.92)",
-              borderRadius: "6px",
-              padding: "4px 8px",
-              backdropFilter: "blur(8px)",
-              flexShrink: 0,
-            }}
-          >
-            <img
-              src={manipalLogo}
-              alt="MIT Bengaluru"
-              style={{
-                height: "28px",
-                width: "auto",
-                objectFit: "contain",
                 display: "block",
               }}
             />
