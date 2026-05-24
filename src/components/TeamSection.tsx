@@ -401,7 +401,7 @@ const TeamSection = () => {
   useEffect(() => { injectFont(); }, []);
 
   const technicalSubsystems = [
-    { code: "OBC",     label: "On-Board Computer",                color: SUBSYSTEM_COLORS.OBC,     lead: "Harshavardhan K",       members: ["Saksham G", "Manya", "Tanay"] },
+    { code: "OBC",     label: "On-Board Computer",                color: SUBSYSTEM_COLORS.OBC,     lead: "Harshavardhan K",       members: ["Saksham", "Manya", "Tanay"] },
     { code: "EPS",     label: "Electrical Power System",          color: SUBSYSTEM_COLORS.EPS,     lead: "Anirudh Nishtala",      members: ["Saanvi", "Nysa", "Anshul"] },
     { code: "COMM",    label: "Communications",                   color: SUBSYSTEM_COLORS.COMM,    lead: "Shivaram Kumar",        members: ["Anirudh Menon", "Rishikesh G", "Kruthi", "Apoorv Mathur"] },
     { code: "ADCS",    label: "Attitude Determination & Control", color: SUBSYSTEM_COLORS.ADCS,    lead: "Rithesh Murarishetty",  members: ["Ruthvik", "Amogh", "Shreya"] },
