@@ -1,4 +1,4 @@
-# Build & Run Guide for Icarus Website (React + Vite + TSX)
+# Build & Run Guide for Icarus Website (React + Vite + TSX) 
 
 This document explains how to set up the environment and build the project using **Node.js v24** with `nvm` and `pnpm` on Linux/macOS.
 
