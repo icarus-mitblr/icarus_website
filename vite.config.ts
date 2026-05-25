@@ -13,9 +13,9 @@ export default defineConfig({
     chunkSizeWarningLimit: 1000,
     rollupOptions: {
       output: {
-        manualChunks: {
-          "vendor-react": ["react", "react-dom", "react-router-dom"],
-          "vendor-motion": ["framer-motion"],
+        manualChunks(id) {
+          if (id.includes("framer-motion")) return "vendor-motion";
+          if (id.includes("react-dom") || id.includes("react-router-dom") || /[/\\]react[/\\]/.test(id)) return "vendor-react";
         },
       },
     },
